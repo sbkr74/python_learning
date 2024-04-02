@@ -6,6 +6,7 @@ int_val = int(input("Enter a integer value:"))
 
 # input as float value
 flt_val = float(input("Enter a float value:"))
+<<<<<<< HEAD
 
 # input as boolean value
 bool_val = bool(input("Enter a boolean value:"))
@@ -21,3 +22,5 @@ print(int_val)
 print(flt_val)
 print(bool_val)
 print(comp_val)
+=======
+>>>>>>> 614340e0cc050fbff405de8956a7f8e3d5ceda82

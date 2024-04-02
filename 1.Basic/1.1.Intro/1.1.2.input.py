@@ -1,2 +1,2 @@
-val = input("Enter any input:")
+val = input("Enter any input: ")
 print("output: "+val)

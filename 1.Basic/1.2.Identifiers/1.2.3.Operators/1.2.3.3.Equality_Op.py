@@ -7,7 +7,7 @@ print(10!=20)
 print(10==False)
 print(False==False)
 print('python'=="python")
-print(10=='program')
+print(10 !='program')
 print()
 # ===============================================================
 a = 3+5j

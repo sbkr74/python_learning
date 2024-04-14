@@ -1,0 +1,6 @@
+# << (left shift operator)
+print(10<<1)
+print(10<<2)
+# >> (right shift operator)
+print(40>>2)
+print(40>>1)

@@ -11,3 +11,10 @@ print(c is e)
 
 # 2. Membership Opertor
 # in and not in
+x = "Python programming from Basic to advance."
+print(x)
+print("to" in x)
+
+y = [1,3,4,6,7,9,4,6,8]
+print(4 in y)
+print(2 in y)

@@ -1,0 +1,1 @@
+The functions created by a user for a particular task which is not predefined or built-in system function can be said as User Defined function 

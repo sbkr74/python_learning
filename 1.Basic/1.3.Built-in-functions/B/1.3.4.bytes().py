@@ -7,4 +7,10 @@ asc = []
 for i in s:
     for j in i:
         asc.append(ord(j))
-print(bytes(asc))
+print(asc)
+b = bytes(asc)
+print(b)
+
+k=[100, 121, 116, 104, 111, 110, 114, 111, 103, 114, 97, 187]
+b1 = bytes(k)
+print(b1)

@@ -10,6 +10,13 @@ print(s)
 print(s1)
 print(s2)
 
+# String Concatenation
+first_name = 'Python'
+last_name = 'programming'
+space = ' '
+full_name = first_name  +  space + last_name
+print(full_name)
+
 #### Unpacking characters 
 language = 'Python'
 a,b,c,d,e,f = language # unpacking sequence characters into variables

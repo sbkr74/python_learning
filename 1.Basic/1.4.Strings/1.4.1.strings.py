@@ -17,6 +17,12 @@ space = ' '
 full_name = first_name  +  space + last_name
 print(full_name)
 
+# Checking length of a string using len() builtin function
+print(len(first_name))  
+print(len(last_name))   
+print(len(first_name) > len(last_name)) 
+print(len(full_name)) 
+
 #### Unpacking characters 
 language = 'Python'
 a,b,c,d,e,f = language # unpacking sequence characters into variables

@@ -7,6 +7,15 @@ s2 = '''example of
 multi-line string'''
 
 print(s)
-print(type(s))
 print(s1)
 print(s2)
+
+#### Unpacking characters 
+language = 'Python'
+a,b,c,d,e,f = language # unpacking sequence characters into variables
+print(a) # P
+print(b) # y
+print(c) # t 
+print(d) # h
+print(e) # o
+print(f) # n

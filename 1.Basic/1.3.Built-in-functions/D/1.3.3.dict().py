@@ -19,3 +19,22 @@ print(my_dict)
 old_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
 my_dict = dict(old_dict)
 print(my_dict)
+
+# few more examples
+a = dict(one=1, two=2, three=3)
+b = {'one': 1, 'two': 2, 'three': 3}
+c = dict(zip(['one', 'two', 'three'], [1, 2, 3]))
+d = dict([('two', 2), ('one', 1), ('three', 3)])
+e = dict({'three': 3, 'one': 1, 'two': 2})
+f = dict({'one': 1, 'three': 3}, two=2)
+print(a==b==c==d==e==f)
+'''
+Dictionaries can be created by several means:
+
+    Use a comma-separated list of key: value pairs within braces: {'jack': 4098, 'sjoerd': 4127} or {4098: 'jack', 4127: 'sjoerd'}
+
+    Use a dict comprehension: {}, {x: x ** 2 for x in range(10)}
+
+    Use the type constructor: dict(), dict([('foo', 100), ('bar', 200)]), dict(foo=100, bar=200)
+
+'''

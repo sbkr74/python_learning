@@ -50,3 +50,21 @@ user_decision = input("Enter the choice: ")
 # User decides to remove 'model' attribute
 if user_decision == 'remove_model':
     delattr(car, 'model')
+
+# Example 3:
+'''
+Cleaning Up Resources: In some cases, attributes may represent resources that need to be cleaned up when no longer needed, 
+such as file handles or network connections.
+'''
+class FileHandler:
+    def __init__(self, filename):
+        self.filename = filename
+        self.file = open(filename, 'r')
+
+    def close_file(self):
+        self.file.close()
+
+file_handler = FileHandler("example.txt")
+# ... do something with file_handler.file ...
+delattr(file_handler, 'file')  # Close file handle when no longer needed
+

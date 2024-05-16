@@ -35,3 +35,18 @@ user = User("john_doe", "john@example.com")
 delattr(user, 'temp_data')  # Remove temp_data after it's no longer needed
 
 
+# Example 2:
+'''
+Dynamic Attribute Handling: Sometimes, attributes need to be dynamically added or removed based on runtime conditions or user input.
+'''
+
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+car = Car("Toyota", "Corolla")
+user_decision = input("Enter the choice: ")
+# User decides to remove 'model' attribute
+if user_decision == 'remove_model':
+    delattr(car, 'model')

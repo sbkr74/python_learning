@@ -9,3 +9,16 @@ If it is a code object, it is simply executed. In all cases, the code that’s e
 Be aware that the nonlocal, yield, and return statements may not be used outside of function definitions 
 even within the context of code passed to the exec() function. The return value is None.
 '''
+
+# Example 1: Executing a String of Code:
+code = """
+a = 10
+b = 20
+result = a + b
+"""
+exec(code)
+print(a)
+print(b)
+print(result)  # Output: 30
+
+

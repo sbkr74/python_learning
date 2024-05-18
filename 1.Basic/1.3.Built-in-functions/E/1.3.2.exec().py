@@ -21,4 +21,13 @@ print(a)
 print(b)
 print(result)  # Output: 30
 
+# Example 2 : Defining a Function Dynamically:
+func_code = """
+def dynamic_func(x):
+    return x ** 2
+"""
+exec(func_code)
+print(dynamic_func(5))  # Output: 25
+
+
 

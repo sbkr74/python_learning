@@ -22,3 +22,8 @@ zero = [0]
 negative_numbers.extend(zero)
 negative_numbers.extend(positive_numbers)
 print('Integers:', negative_numbers)
+
+lang = ['Python','Objective C', 'C++','Bash Script','Java Core','Scala']
+web_technologies = ['HTML', 'CSS', 'JavaScript','React']
+lang.extend(web_technologies)
+print(lang)

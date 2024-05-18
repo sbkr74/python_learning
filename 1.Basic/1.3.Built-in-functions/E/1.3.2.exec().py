@@ -29,5 +29,11 @@ def dynamic_func(x):
 exec(func_code)
 print(dynamic_func(5))  # Output: 25
 
+# Example 3: Modifying the Local Namespace:
+local_vars = {'a': 1, 'b': 2}
+exec('c = a + b', {}, local_vars)
+print(local_vars['c'])  # Output: 3
+print(type(local_vars))
+
 
 

@@ -17,6 +17,12 @@ my_tuple = tuple(my_tuple)
 print(my_tuple)
 print(type(my_tuple))
 
+my_tuple = list(my_tuple)
+my_tuple.clear()                # clear() to empty the tuple
+my_tuple = tuple(my_tuple)
+print(my_tuple)
+print(type(my_tuple))
+
 # Deleting Tuples
 # It is not possible to remove a single item in a tuple but it is possible to delete the tuple itself using del.
 del my_tuple

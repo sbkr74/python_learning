@@ -18,3 +18,16 @@ lang = ['Python','Java','C','C++','C#']
 
 for index, fruit in enumerate(lang,1):
     print(index, fruit)
+
+tasks = [
+    'Write report',
+    'Call John',
+    'Prepare presentation',
+    'Send email updates',
+    'Schedule meeting with team'
+]
+
+print("To-Do List:")
+for index, task in enumerate(tasks, start=1):
+    print(f"{index}. {task}")
+

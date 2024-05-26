@@ -28,3 +28,17 @@ print(formatted_string)
 large_number = 1000000
 formatted_string = "The large number is {:,}".format(large_number)
 print(formatted_string)
+
+# Example 6: Left, Right, and Center Alignment
+left_aligned = "{:<10}".format("left")
+right_aligned = "{:>10}".format("right")
+center_aligned = "{:^10}".format("center")
+print(left_aligned)
+print(right_aligned)
+print(center_aligned)
+
+# Example 7: Combining Width, Alignment, and Number Formatting
+name = "Alice"
+balance = 1234.5678
+formatted_string = "Name: {:<10} | Balance: ${:>10,.2f}".format(name, balance)
+print(formatted_string)

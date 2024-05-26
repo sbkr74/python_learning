@@ -10,3 +10,21 @@ name = "Simba"
 age = 21
 formatted_string = "My name is {} and I am {} years old.".format(name, age)
 print(formatted_string)
+
+# Example 2: Positional Arguments
+formatted_string = "The {0} in {1}.".format("code", "IDE")
+print(formatted_string)
+
+# Example 3: Keyword Arguments
+formatted_string = "My name is {name} and I am {age} years old.".format(name="Bob", age=25)
+print(formatted_string)
+
+# Example 4: Decimal Places
+pi = 3.14159
+formatted_string = "Pi to two decimal places is {:.2f}".format(pi)
+print(formatted_string)
+
+# Example 5: Comma as Thousand Separator
+large_number = 1000000
+formatted_string = "The large number is {:,}".format(large_number)
+print(formatted_string)

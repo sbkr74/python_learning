@@ -42,3 +42,22 @@ name = "Alice"
 balance = 1234.5678
 formatted_string = "Name: {:<10} | Balance: ${:>10,.2f}".format(name, balance)
 print(formatted_string)
+
+############################################################################
+print()
+'''
+generating a report that lists employees' names and their corresponding salaries, formatted neatly in columns.
+'''
+employees = [
+    {"name": "Alice", "salary": 70000},
+    {"name": "Bob", "salary": 85000},
+    {"name": "Charlie", "salary": 95000}
+]
+
+header = "{:<10} | {:>10}".format("Name", "Salary")
+print(header)
+print("-" * len(header))
+
+for employee in employees:
+    formatted_employee = "{:<10} | ${:>10,.2f}".format(employee["name"], employee["salary"])
+    print(formatted_employee)

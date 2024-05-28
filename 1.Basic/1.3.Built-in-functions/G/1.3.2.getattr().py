@@ -45,3 +45,30 @@ for setting in settings_to_access:
     value = get_config_value(config, setting)
     print(f"{setting}: {value}")
 
+'''Advance Use-case: Using getattr() with Methods'''
+class MathOperations:
+    def add(self, a, b):
+        return a + b
+
+    def multiply(self, a, b):
+        return a * b
+
+# Create an instance of MathOperations
+math_ops = MathOperations()
+
+# Function to dynamically call a method
+def dynamic_method_call(obj, method_name, *args):
+    method = getattr(obj, method_name, None)
+    if method:
+        return method(*args)
+    else:
+        return "Method not found"
+
+# Example usage
+result_add = dynamic_method_call(math_ops, 'add', 5, 3)
+result_multiply = dynamic_method_call(math_ops, 'multiply', 5, 3)
+result_non_existent = dynamic_method_call(math_ops, 'subtract', 5, 3)
+
+print(f"Add: {result_add}")
+print(f"Multiply: {result_multiply}")
+print(f"Non-existent method: {result_non_existent}")

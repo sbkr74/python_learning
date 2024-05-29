@@ -24,3 +24,11 @@ print("\nUsing get():")
 print(person.get('age'))
 print(person.get('skills')[2])
 print(person.get('city'))
+
+# accessing all keys of dictionary
+keys = person.keys()
+print(keys)
+
+# accessing all values in dictionary
+values = person.values()
+print(values)

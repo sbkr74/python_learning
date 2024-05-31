@@ -6,7 +6,15 @@ Numeric values that compare equal have the same hash value
 '''
 # Hashing integer
 i = 22
+i = str(i)
 print(hash(i))
+
+# Hashing integer
+j = '22'
+print(hash(j))
+
+# checking
+print(hash(i) == hash(j))
 
 # Hashing string
 s = "I am a Python Developer"

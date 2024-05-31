@@ -16,15 +16,64 @@ if condition:
 ```
 
 **Example: 1**
+```py
+# if condition is True only then execute otherwise pass
+a  = 10
+if (a>17):
+  print(a,"is less than 17")
+```
+Here the condition is true and block is executed. However, if the condition is false, we do not see the result.
+
+In order to see the result of the falsy condition, we should have another block, which is going to be else.
+
+### If Elif
+
+If condition is true the first block will be executed, if not the else condition will run.
 
 ```py
-a = 3
-if a > 0:
-    print('A is a positive number')
-# A is a positive number
+# syntax
+if condition:
+    this part of code runs for first condition
+elif condition:
+     this part of code runs for second condition
+```
+** Example **
+```py
+# syntax
+n = 19
+a = 10
+b = 20
+if (a<n):
+    print(a)
+elif (b==n):
+    print(b)
+```
+### If Elif Else
+
+In our daily life, we make decisions on daily basis. We make decisions not by checking one or two conditions but multiple conditions. As similar to life, programming is also full of conditions. We use _elif_ when we have multiple conditions.
+
+```py
+# syntax
+if condition:
+    code
+elif condition:
+    code
+else:
+    code
+
 ```
 
-As you can see in the example above, 3 is greater than 0. The condition was true and the block code was executed. However, if the condition is false, we do not see the result. In order to see the result of the falsy condition, we should have another block, which is going to be _else_.
+**Example: **
+
+```py
+a = 10
+if(a>10):
+    print("if a:",a)
+elif(a<10):
+    print("elif a:",a)
+else:
+    print("else a:",a)
+```
 
 ### If Else
 
@@ -50,32 +99,7 @@ else:
 
 The condition above proves false, therefore the else block was executed. How about if our condition is more than two? We could use _ elif_.
 
-### If Elif Else
 
-In our daily life, we make decisions on daily basis. We make decisions not by checking one or two conditions but multiple conditions. As similar to life, programming is also full of conditions. We use _elif_ when we have multiple conditions.
-
-```py
-# syntax
-if condition:
-    code
-elif condition:
-    code
-else:
-    code
-
-```
-
-**Example: **
-
-```py
-a = 0
-if a > 0:
-    print('A is a positive number')
-elif a < 0:
-    print('A is a negative number')
-else:
-    print('A is zero')
-```
 
 ### Short Hand
 

@@ -16,4 +16,8 @@ print('city' in person)
 
 # check value in dictionary
 print('India' in person.values())
-print(60 in person.values())
+print('Python' in person.values())
+
+if 'skills' in person.keys():
+    if 'Java' in person['skills']:
+        print(person['skills'])

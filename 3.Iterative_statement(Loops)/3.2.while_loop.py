@@ -11,4 +11,10 @@ while count < 5:
     count = count + 1
 else:
     print(count)    # 5
-    
+
+cn = 1
+while cn < 4:
+    print(cn)
+    cn = cn+1
+    if cn ==3:
+        break

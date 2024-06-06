@@ -4,9 +4,9 @@ def add_number():
     sum = 0 
     for i in range(len(num)):
         sum+=int(num[i])
-    return sum
+    print("Total:",sum)
 
-print('Total:',add_number())        # calling function
+add_number()       # calling function
 
 def skills_print():
     sk1 = 'Python'

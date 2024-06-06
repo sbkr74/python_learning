@@ -130,3 +130,27 @@ def weight_of_object (mass, gravity):
     return weight
 print('Weight of an object in Newtons: ', weight_of_object(100, 9.81))
 ```
+
+### Function Returning a Value
+
+Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.
+
+```py
+def generate_full_name ():
+    first_name = 'Shubham'
+    last_name = 'Biruly'
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+print(generate_full_name())
+```
+```py
+def add_number():
+    num = input("Enter numbers: ").split()
+    sum = 0 
+    for i in range(len(num)):
+        sum+=int(num[i])
+    return sum
+
+print('Total:',add_number())       
+```

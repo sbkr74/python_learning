@@ -289,7 +289,7 @@ def generate_groups (team,*args):
     print(team)
     for i in args:
         print(i)
-print(generate_groups('Team-1','Shubham','Biruly','Biruli','Biru-lee'))
+generate_groups('Team-1','Shubham','Biruly','Biruli','Biru-lee')
 ```
 
 ### Function as a Parameter of Another Function

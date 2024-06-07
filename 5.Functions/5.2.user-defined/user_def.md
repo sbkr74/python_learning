@@ -154,3 +154,57 @@ def add_number():
 
 print('Total:',add_number())       
 ```
+
+- Returning a boolean:
+  **Example:**
+
+```py
+def is_even (n):
+    if n % 2 == 0:
+        print('even')
+        return True    # return stops further execution of the function, similar to break 
+    return False
+print(is_even(10)) # True
+print(is_even(7)) # False
+```
+
+- Returning a list:
+  **Example:**
+
+```py
+def find_even_numbers(n):
+    evens = []
+    for i in range(n + 1):
+        if i % 2 == 0:
+            evens.append(i)
+    return evens
+print(find_even_numbers(10))
+```
+### Passing Arguments with Key and Value
+
+If we pass the arguments with key and value, the order of the arguments does not matter.
+
+```py
+# syntax
+# Declaring a function
+def function_name(para1, para2):
+    codes
+    codes
+# Calling function
+print(function_name(para1 = 'string1', para2 = 'string2')) # the order of arguments does not matter here
+```
+
+**Example:**
+
+```py
+def print_fullname(firstname, lastname):
+    space = ' '
+    full_name = firstname  + space + lastname
+    print(full_name)
+print(print_fullname(firstname = 'Shubham', lastname = 'Biruly'))
+
+def add_two_numbers (num1, num2):
+    total = num1 + num2
+    print(total)
+print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
+```

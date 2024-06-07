@@ -131,6 +131,36 @@ def weight_of_object (mass, gravity):
 print('Weight of an object in Newtons: ', weight_of_object(100, 9.81))
 ```
 
+### Passing Arguments with Key and Value
+
+If we pass the arguments with key and value, the order of the arguments does not matter.
+
+```py
+# syntax
+# Declaring a function
+def function_name(para1, para2):
+    codes
+    codes
+# Calling function
+print(function_name(para1 = 'string1', para2 = 'string2')) # the order of arguments does not matter here
+```
+
+**Example:**
+
+```py
+def print_fullname(firstname, lastname):
+    space = ' '
+    full_name = firstname  + space + lastname
+    print(full_name)
+print_fullname(firstname = 'Shubham', lastname = 'Biruly')
+```
+```py
+def add_two_numbers (num1, num2):
+    total = num1 + num2
+    print(total)
+add_two_numbers(num2 = 3, num1 = 2) # Order does not matter
+```
+
 ### Function Returning a Value
 
 Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.
@@ -179,32 +209,4 @@ def find_even_numbers(n):
             evens.append(i)
     return evens
 print(find_even_numbers(10))
-```
-### Passing Arguments with Key and Value
-
-If we pass the arguments with key and value, the order of the arguments does not matter.
-
-```py
-# syntax
-# Declaring a function
-def function_name(para1, para2):
-    codes
-    codes
-# Calling function
-print(function_name(para1 = 'string1', para2 = 'string2')) # the order of arguments does not matter here
-```
-
-**Example:**
-
-```py
-def print_fullname(firstname, lastname):
-    space = ' '
-    full_name = firstname  + space + lastname
-    print(full_name)
-print(print_fullname(firstname = 'Shubham', lastname = 'Biruly'))
-
-def add_two_numbers (num1, num2):
-    total = num1 + num2
-    print(total)
-print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
 ```

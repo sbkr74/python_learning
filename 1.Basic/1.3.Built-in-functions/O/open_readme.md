@@ -5,49 +5,27 @@
     file is a path-like object giving the pathname (absolute or relative to the current working directory) of the file to be opened or an integer file descriptor of the file to be wrapped. (If a file descriptor is given, it is closed when the returned I/O object is closed unless closefd is set to False.)
 
     mode is an optional string that specifies the mode in which the file is opened. It defaults to 'r' which means open for reading in text mode. Other common values are 'w' for writing (truncating the file if it already exists), 'x' for exclusive creation, and 'a' for appending (which on some Unix systems, means that all writes append to the end of the file regardless of the current seek position). In text mode, if encoding is not specified the encoding used is platform-dependent: locale.getencoding() is called to get the current locale encoding. (For reading and writing raw bytes use binary mode and leave encoding unspecified.) The available modes are:
+```
+    Character                   Meaning
 
-    Character
-    	
+    'r'                 open for reading (default)
 
-    Meaning
+    'w'                 open for writing, truncating the file first
 
-    'r'
-    	
+    'x'                 open for exclusive creation, failing if the file already exists
 
-    open for reading (default)
+    'a'                 open for writing, appending to the end of file if it exists
 
-    'w'
-    	
+    'b'                 binary mode
 
-    open for writing, truncating the file first
+    't'                 text mode (default)
 
-    'x'
-    	
+    '+'                 open for updating (reading and writing)
 
-    open for exclusive creation, failing if the file already exists
-
-    'a'
-    	
-
-    open for writing, appending to the end of file if it exists
-
-    'b'
-    	
-
-    binary mode
-
-    't'
-    	
-
-    text mode (default)
-
-    '+'
-    	
-
-    open for updating (reading and writing)
-
+    
+```
     The default mode is 'r' (open for reading text, a synonym of 'rt'). Modes 'w+' and 'w+b' open and truncate the file. Modes 'r+' and 'r+b' open the file with no truncation.
-
+    
     As mentioned in the Overview, Python distinguishes between binary and text I/O. Files opened in binary mode (including 'b' in the mode argument) return contents as bytes objects without any decoding. In text mode (the default, or when 't' is included in the mode argument), the contents of the file are returned as str, the bytes having been first decoded using a platform-dependent encoding or using the specified encoding if given.
 
     Note
@@ -91,7 +69,7 @@
     The newly created file is non-inheritable.
 
     The following example uses the dir_fd parameter of the os.open() function to open a file relative to a given directory:
-    >>>
+    
 ```py
 import os
 dir_fd = os.open('somedir', os.O_RDONLY)

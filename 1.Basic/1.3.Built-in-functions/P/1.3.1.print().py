@@ -14,3 +14,9 @@ with open("Data/output.txt", "w") as f:
 # Open a file in append mode
 with open("Data/output.txt", "a") as f:
     print("Appending this line.", file=f)
+
+# Writing to a file with explicit flushing
+with open("Data/output.txt", "a") as f:
+    print("appending another", file=f, flush=True)
+    # Forces the data to be immediately written to the file
+

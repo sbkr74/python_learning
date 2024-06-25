@@ -110,3 +110,48 @@ print(SimpleMath.divide(10, 5))    # Output: 2.0
 ```
 
 In summary, `staticmethod()` is useful when you need to group related functions within a class for organizational purposes, but the functions themselves do not require access to any instance or class-specific data. This makes the code cleaner and more maintainable.
+
+In Python, `staticmethod()` is used to define a method that doesn't access or modify the class state. It's often used to group functions logically with a class even though they do not operate on an instance of the class or the class itself. A real-life example can help illustrate this concept better.
+
+### Example: Utility Class for Mathematical Operations
+
+Consider a scenario where you have a utility class for mathematical operations. Some operations, such as converting a number to its absolute value, don't need access to any instance or class variables. These operations can be implemented as static methods.
+
+Here's how you might use `staticmethod()` in this context:
+
+```python
+class MathUtils:
+    @staticmethod
+    def is_even(number):
+        """Check if a number is even."""
+        return number % 2 == 0
+
+    @staticmethod
+    def is_prime(number):
+        """Check if a number is prime."""
+        if number <= 1:
+            return False
+        for i in range(2, int(number ** 0.5) + 1):
+            if number % i == 0:
+                return False
+        return True
+
+    @staticmethod
+    def gcd(a, b):
+        """Calculate the greatest common divisor (GCD) of two numbers."""
+        while b:
+            a, b = b, a % b
+        return a
+
+# Using the static methods without creating an instance of the class
+print(MathUtils.is_even(10))  # Output: True
+print(MathUtils.is_prime(7))  # Output: True
+print(MathUtils.gcd(24, 18))  # Output: 6
+```
+
+### Explanation:
+- **`is_even`**: This method checks if a number is even. It doesn't need any class or instance data to perform this check, so it is defined as a static method.
+- **`is_prime`**: This method checks if a number is prime. Like `is_even`, it does not require any class or instance data.
+- **`gcd`**: This method calculates the greatest common divisor of two numbers, which is also independent of any class or instance data.
+
+By using `@staticmethod`, these methods are associated with the `MathUtils` class, providing a clear organizational structure and making it easy to see that these methods belong to the utility class for mathematical operations. However, they do not need any instance of the class to operate, emphasizing their static nature.

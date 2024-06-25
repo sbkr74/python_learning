@@ -29,12 +29,12 @@ class Child(Parent):
         print(f"And I'm {self.age} years old")
 
 # Create an instance of Child
-child = Child("Alice", 12)
+child = Child("Shubham Biruly", 25)
 child.greet()
 
 # Output:
-# Hello from Alice
-# And I'm 12 years old
+# Hello from Shubham Biruly
+# And I'm 25 years old
 ```
 
 ### Example with Multiple Inheritance

@@ -31,3 +31,35 @@ class Dog(Animal):
 
 dog = Dog()
 dog.sound()
+
+#################################################################
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+    
+    def work(self):
+        print(f"{self.name} is working with a salary of {self.salary}")
+
+class Manager(Employee):
+    def __init__(self, name, salary, department):
+        # Call the parent class's constructor using super()
+        super().__init__(name, salary)
+        self.department = department
+    
+    def work(self):
+        # Call the parent class's work method using super()
+        super().work()
+        print(f"{self.name} is managing the {self.department} department")
+
+# Create an instance of Employee
+emp = Employee("Shubham", 50000)
+emp.work()
+# Output: Shubham is working with a salary of 50000
+
+# Create an instance of Manager
+mgr = Manager("Biruly", 70000, "IT")
+mgr.work()
+# Output:
+# Biruly is working with a salary of 70000
+# Biruly is managing the IT department

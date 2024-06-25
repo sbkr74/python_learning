@@ -20,3 +20,14 @@ class MyClass:
 
 # Call the class method without creating an instance
 MyClass.class_method()
+
+################################################
+class MathUtils:
+    _factor = 5
+
+    @classmethod
+    def multiply(cls, a):
+        return a * cls._factor
+
+# Call the class method without creating an instance
+print(MathUtils.multiply(5))  # Output: 25

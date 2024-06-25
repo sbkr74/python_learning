@@ -17,3 +17,17 @@ class Child(Parent):
 # Create an instance of Child
 child = Child("Shubham Biruly", 25)
 child.greet()
+
+######################################################
+''' Using super() for method overriding'''
+class Animal:
+    def sound(self):
+        print("Animal sound")
+
+class Dog(Animal):
+    def sound(self):
+        super().sound()
+        print(f"{self.__class__.__name__} Bark")
+
+dog = Dog()
+dog.sound()

@@ -19,12 +19,12 @@ class Person:
 person = Person()
 
 # Set attributes using setattr()
-setattr(person, 'name', 'Alice')
-setattr(person, 'age', 30)
+setattr(person, 'name', 'Shubham Biruly')
+setattr(person, 'age', 25)
 
 # Access the attributes to verify
-print(person.name)  # Output: Alice
-print(person.age)   # Output: 30
+print(person.name)  # Output: Shubham Biruly
+print(person.age)   # Output: 25
 ```
 
 #### Using `setattr()` with a List of Attributes

@@ -23,3 +23,6 @@ def salary(pos,depart):
         return 3800000
     else:
         return "not in database."
+    
+def location(loc):
+    return loc

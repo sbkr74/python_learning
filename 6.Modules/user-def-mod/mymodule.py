@@ -21,8 +21,14 @@ def salary(pos,depart):
         return 2400000
     elif depart == 'Dev department' and pos == 'Senior Associate':
         return 3800000
+    elif depart == 'Test department' and pos == 'Junior Associate':
+        return 450000
+    elif depart == 'Test department' and pos == 'Associate':
+        return 1200000
+    elif depart == 'Test department' and pos == 'Senior Associate':
+        return 2000000
     else:
         return "not in database."
     
 def location(loc):
-    return loc
+    return loc + ", IND"

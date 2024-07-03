@@ -345,9 +345,7 @@ Checks if a path exists.
   def check_path_exists(path):
       if os.path.exists(path):
           print(f"Path exists: {path}")
-      else
-
-:
+      else:
           print(f"Path does not exist: {path}")
 
   check_path_exists('file.txt')

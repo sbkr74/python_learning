@@ -14,6 +14,14 @@ def user_id_gen_by_user():
         user_id.append(ids)    
     for id in user_id:
         print(id)
+
+def rgb_color_gen():
+    red = r.randint(0,255)
+    green = r.randint(0,255)
+    blue = r.randint(0,255)
+    return f"rgb({red},{green},{blue})"
+
 if __name__ == "__main__":
     print(random_user_id())
     user_id_gen_by_user()
+    print(rgb_color_gen())

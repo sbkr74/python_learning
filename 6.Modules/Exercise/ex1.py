@@ -14,6 +14,6 @@ def user_id_gen_by_user():
         user_id.append(ids)    
     for id in user_id:
         print(id)
-if __name__ == __name__:
+if __name__ == "__main__":
     print(random_user_id())
     user_id_gen_by_user()

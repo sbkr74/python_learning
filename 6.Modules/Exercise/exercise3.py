@@ -17,7 +17,8 @@ def random7():
             rand7.append(r)
     return rand7
 
-
+def random7Samp():
+    return sa(range(10),7)
 
 if __name__ == '__main__':
     myList = [1,2,3,4,5]
@@ -28,5 +29,5 @@ if __name__ == '__main__':
     print(shuffleList)
 
     print(random7())
-    
+    print(random7Samp())
 

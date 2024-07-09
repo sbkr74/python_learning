@@ -23,3 +23,11 @@ print(even)
 
 odd = [num for num in range(1,20) if num%2!=0]
 print(odd)
+
+# finding length of each word in a list.
+def length(word):
+    return len(word)
+
+words = ['Python','Programming','from','Basic','to','advance']
+word_length = [length(word) for word in words]
+print(word_length) 

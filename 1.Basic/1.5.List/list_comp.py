@@ -40,3 +40,8 @@ print(word_length)
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9],(4,4,4)]
 flattened = [num for row in matrix for num in row]
 print(flattened)
+
+
+# alternative sequence generator for better performance
+squares_gen = (x**2 for x in range(10))
+print(list(squares_gen))

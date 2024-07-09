@@ -31,3 +31,8 @@ def length(word):
 words = ['Python','Programming','from','Basic','to','advance']
 word_length = [length(word) for word in words]
 print(word_length) 
+
+# converting multiple list inside a list into single list
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9],(4,4,4)]
+flattened = [num for row in matrix for num in row]
+print(flattened)

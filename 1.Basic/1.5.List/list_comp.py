@@ -17,6 +17,10 @@ string = 'Python'
 strList = [i for i in string]
 print(strList)
 
+# value and and its square
+numbers = [(i,i*i) for i in range(11)]
+print(numbers)
+
 # for generating even number and odd number
 even = [num for num in range(1,21) if num%2==0]
 print(even)

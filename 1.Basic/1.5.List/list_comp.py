@@ -10,3 +10,10 @@ print(itemList)
 print(itemArr)
 print(itemComp)
 print(newComp)
+
+##############################################################
+# coverting string to list without using list().
+string = 'Python'
+strList = [i for i in string]
+print(strList)
+

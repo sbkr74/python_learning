@@ -30,7 +30,7 @@ def higher_order_function(type):
     elif type == 'abs':
         return abs
     else:
-        return 'function not defined'
+        return None
 
 result = higher_order_function('square')
 print(result(3))
@@ -39,4 +39,7 @@ print(result(3))
 result = higher_order_function('abs')
 print(result(-3))
 result = higher_order_function('xyz')
-print(result(3))
+if result:
+    print(result(3))
+else:
+    print('Function not defined')

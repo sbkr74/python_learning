@@ -39,7 +39,13 @@ print(result(3))
 result = higher_order_function('abs')
 print(result(-3))
 result = higher_order_function('xyz')
-if result:
-    print(result(3))
-else:
-    print('Function not defined')
+# if result:
+#     print(result(3))
+# else:
+#     print('Function not defined')
+
+try:
+    result = higher_order_function('abc')
+    print(result(7))
+except Exception as e:
+    print("Error:",e)

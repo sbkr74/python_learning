@@ -46,3 +46,17 @@ def compliment():
     return 'It was good interaction.'
 
 print(compliment())
+
+###############################################################
+# parameters in decorator functions
+def dec_para(function):
+    def wrap_multi_para(para1,para2,para3):
+        function(para1,para2,para3)
+        print("I live in {}".format(para3))
+    return wrap_multi_para
+
+@dec_para
+def details(fname,lname,country):
+    print("I am {} {}. I am a DE by profession.".format(fname,lname,country))
+
+details("Shubham","Biruly","India")

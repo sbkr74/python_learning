@@ -7,7 +7,7 @@ def power():
     return sq
 
 closure_result = power()
-print(f"power:",closure_result(2))
+print("power:",closure_result(2))
 
 # adder function
 def adder(x):

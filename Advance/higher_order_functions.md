@@ -77,4 +77,59 @@ In this example:
 - `apply_function_twice` is a higher-order function that takes a function `func` and a value, applying the function to the value twice.
 - `create_multiplier` is a higher-order function that returns a new function configured to multiply its input by the specified `multiplier`.
 
+Here are two versions of the higher-order function: one using `filter()` and another using `reduce()`, without using lambda functions.
+
+### Using `filter()`
+
+For the `filter()` version, we'll create a helper function to check if an element's index is within the first `n` elements:
+
+```python
+def take_n_items_filter(n):
+    def first_n_items(lst):
+        def within_first_n(item):
+            return lst.index(item) < n
+        return list(filter(within_first_n, lst))
+    return first_n_items
+
+# Create a function that takes the first 10 items
+take_10_items_filter = take_n_items_filter(10)
+
+# Example usage
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+first_ten_filter = take_10_items_filter(my_list)
+print(first_ten_filter)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+### Using `reduce()`
+
+For the `reduce()` version, we'll create a helper function to accumulate the first `n` elements:
+
+```python
+from functools import reduce
+
+def take_n_items_reduce(n):
+    def first_n_items(lst):
+        def reducer(acc, item):
+            if len(acc) < n:
+                acc.append(item)
+            return acc
+        return reduce(reducer, lst, [])
+    return first_n_items
+
+# Create a function that takes the first 10 items
+take_10_items_reduce = take_n_items_reduce(10)
+
+# Example usage
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+first_ten_reduce = take_10_items_reduce(my_list)
+print(first_ten_reduce)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+### Summary
+
+- The `filter()` version uses a helper function `within_first_n` to check if an element's index is within the first `n` elements.
+- The `reduce()` version uses a helper function `reducer` to accumulate the first `n` elements into a list.
+
+Both approaches achieve the goal without using lambda functions.
+
 Higher-order functions are powerful tools in Python, enabling more abstract, reusable, and concise code.

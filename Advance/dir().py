@@ -1,5 +1,5 @@
 a =dir(int)
 print(a)
-
+print("\n------------------------------------\n")
 b = dir(str)
 print(b)

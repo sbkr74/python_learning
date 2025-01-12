@@ -1,5 +1,13 @@
 A higher-order function in Python is a function that either takes one or more functions as arguments, returns a function as its result, or both. These functions allow for more abstract and concise code and are a fundamental concept in functional programming.
 
+### Properties of higher-order functions:
+
+- A function is an instance of the Object type.
+- Store the function in a variable.
+- Pass the function as a parameter to another function.
+- Return the function from a function.
+- Store them in data structures such as hash tables, lists, etc.
+
 ### Characteristics of Higher-Order Functions
 
 1. **Takes one or more functions as arguments:**

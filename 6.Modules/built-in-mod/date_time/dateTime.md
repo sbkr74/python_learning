@@ -71,7 +71,6 @@ time two: 05/12/2019, 01:05:01
 
 Here are all the _strftime_ symbols we use to format time. An example of all the formats for this module.
 
-![strftime](../images/strftime.png)
 
 ### String to Time Using *strptime*
 Here is a [documentation](https://www.programiz.com/python-programming/datetime/strptimet) hat helps to understand the format. 
@@ -149,14 +148,9 @@ from datetime import timedelta
 t1 = timedelta(weeks=12, days=10, hours=4, seconds=20)
 t2 = timedelta(days=7, hours=5, minutes=3, seconds=30)
 t3 = t1 - t2
-print("t3 =", t3)
+print("t3 =", t3)           # t3 = 86 days, 22:56:50
 ```
 
-```sh
-    date_string = 5 December, 2019
-    date_object = 2019-12-05 00:00:00
-    t3 = 86 days, 22:56:50
-```
 
 🌕 You are an extraordinary. You are 16 steps a head to your way to greatness. Now do some exercises for your brain and muscles.
 

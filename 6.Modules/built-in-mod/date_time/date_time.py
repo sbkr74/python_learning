@@ -46,16 +46,30 @@ print("date_string =", date_string)
 date_object = datetime.strptime(date_string, "%d %B, %Y")
 print("date_object =", date_object)
 
+#------------------------------------------------------------------
 # Using date
 from datetime import date
 d = date(2020, 1, 1)
 print(d)
 print('Current date:', d.today())    # 2019-12-05
+
 # date object of today's date
 today = date.today()
 print("Current year:", today.year)   # 2019
 print("Current month:", today.month) # 12
 print("Current day:", today.day)     # 5
+
+# Difference between date and datetime
+today = date(year=2024, month=12, day=5)
+new_year = date(year=2025, month=1, day=1)
+days_left_for_newyear = new_year - today
+
+print("Time left for new year: ",days_left_for_newyear)
+
+t1 = datetime(year=2024, month=12, day=5, hour=0, minute=59, second=0)
+t2 = datetime(year=2025, month=1, day=1, hour=0, minute=0, second=0)
+diff = t2-t1
+print('Time left for new year:',diff)
 
 # Using time
 from datetime import time
@@ -71,3 +85,10 @@ print("c =", c)
 # time(hour, minute, second, microsecond)
 d = time(10, 30, 50, 200555)
 print("d =", d)
+
+# Difference using timedelta
+from datetime import timedelta
+t1 = timedelta(weeks=12, days=10, hours=4, seconds=20)
+t2 = timedelta(days=7, hours=5, minutes=3, seconds=30)
+t3 = t1 - t2
+print("t3 =", t3)

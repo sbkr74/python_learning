@@ -16,6 +16,11 @@ def generate_word(vowel):
             return "Please enter a valid vowel (a, e, i, o, u)"
 
 # Example usage
-user_input = input("Enter a vowel: ").lower()
-word = generate_word(user_input)
-print(f"Generated word: {word}")
+print("Type quit to Terminate the program")
+while True:
+    user_input = input("\nEnter a vowel: ").lower()
+    if user_input == "quit":
+        break
+    else:
+        word = generate_word(user_input)
+        print(f"Generated word: {word}")

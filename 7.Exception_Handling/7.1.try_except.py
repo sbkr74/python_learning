@@ -34,7 +34,7 @@ except TypeError:
 try:
     name = input('Enter your name:')
     year_born = input('Year you were born:')
-    age = 2019 - year_born
+    age = 2025 - year_born
     print(f'You are {name} and your age is {age}.')
 except TypeError:
     print('Type error occured')
@@ -43,3 +43,5 @@ except ValueError:
 except ZeroDivisionError:
     print('zero division error occured')
 
+# check for else with try-except
+# also generate example for try-except with finally.

@@ -21,3 +21,22 @@ if result:
     print("Match: Found")
 else:
     print("Match: Not Found")
+
+# Special Symbols
+# (.) - any single character
+if re.search("c.t","I have a cat. But also cut my finger."):
+    print("(.): Found")
+
+# (*) - character before can appear many times or not at all.
+if re.search("ca*t","Look out for caaaat!."):
+    print("(*): Found")
+
+# (+) - Like star but character should must appear at least once
+if re.search("ca+t","I have a ct. But also cut my finger."):
+    print("(+): Found")
+else:
+    print("(+): Not found")
+
+# (?) - character before is optional.
+if re.search("colou?r","What color is it?"):
+    print("(?): Found")

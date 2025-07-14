@@ -12,8 +12,15 @@ print(numbers)
 
 '''Extracting phone numbers'''
 num = 1
-# numbers = int(numbers)
+
+numbers = list(map(int,numbers))
+k=1
 for i in numbers:
-    i = int(i)
-    i=i*10 + (numbers[i+1])
-    print(i)
+    temp=i*10+numbers[k]
+
+    print(i*10,numbers[k],temp)
+    if k<len(numbers)-1:
+        k+=1
+    else:
+        break
+

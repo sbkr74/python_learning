@@ -60,3 +60,13 @@ pattern = r"[a-z]+@[a-z]+.[a-z]+"
 mod_pattern = r"[a-z0-9A-Z_.+-]+@[a-z0-9A-Z_.+-]+\.[a-z0-9A-Z_.+-]+"
 print(re.findall(pattern, text))
 print(re.findall(mod_pattern, text))
+
+# Pattern #8 [Look ahead]
+text = "Knowledge is power. Time is money."
+pattern = r"\w+(?=\sis)"
+print(re.findall(pattern, text))
+
+# Pattern #9 [Look behind]
+text = "Knowledge is power. Time is money."
+pattern = r"(?<=is\s)[a-z]+"
+print(re.findall(pattern, text))

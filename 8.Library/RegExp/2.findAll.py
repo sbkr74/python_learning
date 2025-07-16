@@ -62,11 +62,21 @@ print(re.findall(pattern, text))
 print(re.findall(mod_pattern, text))
 
 # Pattern #8 [Look ahead]
+# Example #1
 text = "Knowledge is power. Time is money."
 pattern = r"\w+(?=\sis)"
 print(re.findall(pattern, text))
 
+# Example #2
+pattern = r"\b(?!is)\w+\b(?!\sis\s)"
+print(re.findall(pattern, text))
+
 # Pattern #9 [Look behind]
+# Example #1
 text = "Knowledge is power. Time is money."
 pattern = r"(?<=is\s)[a-z]+"
+print(re.findall(pattern, text))
+
+# Example #2
+pattern = r"\b(?!is\b)\w+"
 print(re.findall(pattern, text))

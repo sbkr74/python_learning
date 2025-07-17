@@ -80,3 +80,15 @@ print(re.findall(pattern, text))
 # Example #2
 pattern = r"\b(?!is\b)\w+"
 print(re.findall(pattern, text))
+
+# Pattern #10 [Duplicate Words]
+text = "I saw a a a dog. the the cat ran."
+# pattern = r"\b(\w+)\s+\1\b"
+pattern = r"\b(\w+)\s+\1\b"
+print(re.findall(pattern, text))
+
+# Future References
+'''
+# Duplicates more than N(No. of dupl.)
+# Searching Duplicates case insensitive. 
+'''

@@ -8,9 +8,9 @@ print(all_matches)
 # pattern #1 [Literal Match]
 text = "apple banana apple grape"
 matches = re.findall(r"apple", text)
-print(matches)  # ['apple', 'apple']
+print(matches)  
 
-# pattern #2 [Matching Digit]
+# pattern #2 [Matching Digits]
 # Example #1
 sentence = "My phone number is 1234560987"
 numbers = re.findall(r"\d",sentence)
@@ -83,7 +83,6 @@ print(re.findall(pattern, text))
 
 # Pattern #10 [Duplicate Words]
 text = "I saw a a a dog. the the cat ran."
-# pattern = r"\b(\w+)\s+\1\b"
 pattern = r"\b(\w+)\s+\1\b"
 print(re.findall(pattern, text))
 
@@ -92,3 +91,13 @@ print(re.findall(pattern, text))
 # Duplicates more than N(No. of dupl.)
 # Searching Duplicates case insensitive. 
 '''
+
+# Pattern #11 [Start and End of Line]
+text = "I saw a a dog. The the cat ran"
+pattern = r"^I|ran$"
+print(re.findall(pattern, text))
+
+# Pattern #12 [Extraction Content b/w Balanced Quotes]
+text = 'She said "hello" and then "goodbye".'
+pattern = r'"(.*?)"'
+print(re.findall(pattern, text))

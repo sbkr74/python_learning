@@ -101,3 +101,10 @@ print(re.findall(pattern, text))
 text = 'She said "hello" and then "goodbye".'
 pattern = r'"(.*?)"'
 print(re.findall(pattern, text))
+
+# Pattern #13 [Valid IPv4]
+text = "My IP is 192.168.0.1 and router is 10.0.0.254"
+pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
+mod_pattern = r"\b(?:\d{1,3}\.){3}\d{1,3}\b"
+print(re.findall(pattern, text))
+print(re.findall(mod_pattern, text))
